@@ -9,7 +9,7 @@ WORKDIR data
 
 RUN pwd
 
-RUN sleep infinity
+RUN while sleep 3600; do :; done
 
 
 # RUN sed -i "2i/mount.sh &" /plex-common.sh
