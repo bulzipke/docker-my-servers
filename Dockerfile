@@ -1,14 +1,15 @@
 FROM alpine:latest
 MAINTAINER bulzipke <bulzipke@naver.com>
 
-
 RUN apk update && apk upgrade
 # COPY scripts/* /root/
 
 VOLUME /data
+WORKDIR data
 
-# CMD ["/root/setup.sh"]
+RUN pwd
 
+CMD ["sleep infinity"]
 
 
 # RUN sed -i "2i/mount.sh &" /plex-common.sh
