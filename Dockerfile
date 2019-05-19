@@ -6,7 +6,5 @@ RUN apk add openjdk8-jre-base python3
 
 COPY rootfs /
 
-WORKDIR data
-
-CMD ["./run_servers.py", "while sleep 3600; do :; done"]
+CMD ["/setup.sh"]
 
