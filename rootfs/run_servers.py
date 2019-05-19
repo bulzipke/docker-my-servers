@@ -5,7 +5,7 @@ CURRENT_DIR = '.'
 
 print('start my servers')
 
-os.system('pip3 install --upgrade pip'.format(target))
+os.system('pip3 install --upgrade pip')
 for target in [name for name in os.listdir(CURRENT_DIR) if os.path.isdir(os.path.join(CURRENT_DIR, name))]:
     for file in os.listdir('./{}'.format(target)):
         if file.endswith('.py'):
