@@ -3,7 +3,7 @@ MAINTAINER bulzipke <bulzipke@naver.com>
 
 RUN apk update && apk upgrade
 RUN apk add openjdk8-jre-base python3 ffmpeg
-RUN apk add --virtual build-dependencies python3-dev g++ freetype-dev
+RUN apk add --virtual build-dependencies python3-dev g++ freetype-dev libxslt-dev
 
 COPY rootfs /
 
