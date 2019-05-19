@@ -1,0 +1,12 @@
+matplotlib
+asyncio_redis
+telepot
+geopy
+korail2
+htmlement
+youtube_dl
+mutagen
+tossi
+selenium
+pandas_datareader
+
