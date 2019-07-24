@@ -2,7 +2,7 @@ FROM alpine:latest
 MAINTAINER bulzipke <bulzipke@naver.com>
 
 RUN apk update && apk upgrade
-RUN apk add openjdk8-jre-base python3 ffmpeg nss transmission-daemon
+RUN apk add openjdk8-jre-base python3 ffmpeg nss transmission-daemon s6
 RUN apk add --virtual build-dependencies python3-dev g++ freetype-dev libxslt-dev
 
 COPY rootfs /
