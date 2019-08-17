@@ -18,5 +18,7 @@ if os.path.isfile('cron.conf'):
     print('cron.conf found')
     os.system('cat cron.conf >> /etc/crontabs/root')
     
+os.system('/usr/bin/svnserve -d -r /data/svn')
+    
 print('complete')
 
