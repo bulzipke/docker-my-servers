@@ -19,6 +19,8 @@ if os.path.isfile('cron.conf'):
     os.system('cat cron.conf >> /etc/crontabs/root')
     
 os.system('/usr/bin/svnserve -d -r /data/svn')
+
+os.system('/usr/bin/transmission-daemon -g /data/torrent')
     
 print('complete')
 
