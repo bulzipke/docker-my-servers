@@ -9,4 +9,4 @@ mutagen
 tossi
 selenium
 pandas_datareader
-
+awscli
