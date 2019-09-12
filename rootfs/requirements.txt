@@ -10,3 +10,4 @@ tossi
 selenium
 pandas_datareader
 awscli
+pytz
