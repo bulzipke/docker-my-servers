@@ -15,6 +15,7 @@ RUN apk update && apk upgrade && \
   rm -rf s6-overlay.tar.gz && \
   pip3 install --upgrade pip && \
   pip3 install --upgrade -r /requirements.txt && \
-  apk del build-dependencies
+  apk del build-dependencies \
+  addgroup -S abc -g 1000 && adduser -S abc -G abc -u 1000
 
 ENTRYPOINT ["/init"]
