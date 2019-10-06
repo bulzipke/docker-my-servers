@@ -9,10 +9,10 @@ for target in [name for name in os.listdir(TARGET_DIR) if os.path.isdir(os.path.
     for file in os.listdir('{}/{}'.format(TARGET_DIR, target)):
         if file.endswith('.py'):
             print('run {} in {}'.format(file, target))
-            os.system('cd {}/{}; s6-setuidgid abc nohup python3 -u {} &'.format(TARGET_DIR, target, file))
+            os.system('cd {}/{}; python3 -u {} >> /logs/{}.log &'.format(TARGET_DIR, target, file, target))
         elif file.endswith('.jar'):
             print('run {} in {}'.format(file, target))
-            os.system('cd {}/{}; s6-setuidgid abc nohup java -jar {} &'.format(TARGET_DIR, target, file))
+            os.system('cd {}/{}; java -jar {} >> /logs/{}.log &'.format(TARGET_DIR, target, file, target))
 
 print('complete')
 
