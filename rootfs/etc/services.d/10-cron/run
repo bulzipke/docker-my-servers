@@ -2,4 +2,5 @@
 
 echo run crond
 
+crond
 exec HOME=/abc s6-setuidgid abc /usr/sbin/crond -f
