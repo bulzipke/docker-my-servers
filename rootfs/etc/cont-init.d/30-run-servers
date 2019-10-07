@@ -14,5 +14,4 @@ s6-setuidgid abc /usr/bin/svnserve -d -r $TARGET_DIR/svn
 s6-setuidgid abc /usr/bin/transmission-daemon -g $TARGET_DIR/torrent
 
 # run my servers
-s6-setuidgid abc /usr/local/bin/run_servers.py
-
+HOME=/abc s6-setuidgid abc /usr/local/bin/run_servers.py
