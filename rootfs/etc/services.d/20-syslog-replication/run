@@ -2,5 +2,5 @@
 
 echo run syslog replication
 
-exec HOME=/abc s6-setuidgid abc tail -f /syslog >> /logs/unraid.log
+exec s6-setuidgid abc tail -f /syslog >> /logs/unraid.log
 
