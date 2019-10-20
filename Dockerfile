@@ -3,8 +3,8 @@ MAINTAINER bulzipke <bulzipke@naver.com>
 
 ENV UID=1000
 ENV GID=1000
-ENV AWS_SHARED_CREDENTIALS_FILE=/data
-ENV AWS_CONFIG_FILE=/data
+ENV AWS_SHARED_CREDENTIALS_FILE=/data/aws/credentials
+ENV AWS_CONFIG_FILE=/data/aws/config
 
 ADD rootfs /
 
