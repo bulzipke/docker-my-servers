@@ -8,7 +8,7 @@ ADD rootfs /
 
 RUN apk update && apk upgrade && \
   apk add openjdk8-jre-base python3 ffmpeg nss subversion && \
-  transmission-daemon transmission-cli && \
+  transmission-daemon transmission-cli coreutils && \
   tzdata chromium-chromedriver chromium && \
   apk add --virtual build-dependencies curl python3-dev g++ freetype-dev libxslt-dev && \
   S6_VERSION=$(curl -sX GET "https://api.github.com/repos/just-containers/s6-overlay/releases/latest" | awk '/tag_name/{print $4;exit}' FS='[""]') && \
