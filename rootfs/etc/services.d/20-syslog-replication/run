@@ -1,6 +1,0 @@
-#!/usr/bin/with-contenv sh
-
-echo run syslog replication
-
-exec s6-setuidgid abc tail -f /syslog >> /logs/unraid.log
-
