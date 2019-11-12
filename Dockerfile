@@ -22,6 +22,12 @@ RUN apk update && apk upgrade && \
   pip3 install --upgrade pip && \
   pip3 install --upgrade -r /requirements.txt -r /opt/cloudplow/requirements.txt && \
   ln -s /opt/cloudplow/cloudplow.py /usr/local/bin/cloudplow && \
+  curl -O https://downloads.rclone.org/rclone-current-linux-amd64.zip && \
+  unzip rclone-current-linux-amd64.zip && \
+  mv rclone-*-linux-amd64/rclone /usr/bin/ && \
+  rm -rf rclone* && \
+  chown root:root /usr/bin/rclone && \
+  chmod 755 /usr/bin/rclone && \
   apk del build-dependencies
 
 ENTRYPOINT ["/init"]
