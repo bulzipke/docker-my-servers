@@ -30,6 +30,12 @@ RUN apk update && apk upgrade && \
   rm -rf rclone* && \
   chown root:root /usr/bin/rclone && \
   chmod 755 /usr/bin/rclone && \
+  OAUTH2=$(curl -s https://api.github.com/repos/pusher/oauth2_proxy/releases/latest | grep browser_download_url | grep linux-amd64\.go | sed s/.*\:\ //g | sed s/\"//g) && \
+  curl -o file.tar.gz -L ${OAUTH2} && \
+  tar xfz file.tar.gz && \
+  mv oauth2*/* /usr/bin/ && \
+  rm -rf file.tar.gz && \
+  chown root:root /usr/bin/oauth2_proxy && \
   npm i -g green-tunnel && \
   apk del build-dependencies
 
