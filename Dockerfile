@@ -30,7 +30,7 @@ RUN apk update && apk upgrade && \
   rm -rf rclone* && \
   chown root:root /usr/bin/rclone && \
   chmod 755 /usr/bin/rclone && \
-  curl -o file.tar.gz -L $https://github.com/pusher/oauth2_proxy/releases/download/v4.0.0/oauth2_proxy-v4.0.0.linux-amd64.go1.12.1.tar.gz && \
+  curl -o file.tar.gz -L https://github.com/pusher/oauth2_proxy/releases/download/v4.0.0/oauth2_proxy-v4.0.0.linux-amd64.go1.12.1.tar.gz && \
   tar xfz file.tar.gz && \
   mv oauth2*/* /usr/bin/ && \
   rm -rf file.tar.gz && \
