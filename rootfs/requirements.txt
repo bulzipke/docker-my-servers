@@ -7,3 +7,4 @@ tossi
 selenium
 awscli
 pytz
+lxml
