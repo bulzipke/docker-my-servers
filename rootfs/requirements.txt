@@ -8,3 +8,4 @@ selenium
 awscli
 pytz
 lxml
+bs4
