@@ -34,6 +34,7 @@ RUN apk update && apk upgrade && \
   tar xfz file.tar.gz && \
   mv oauth2*/* /usr/bin/ && \
   rm -rf file.tar.gz && \
+  rm -rf oauth2* && \
   chown root:root /usr/bin/oauth2_proxy && \
   npm i -g green-tunnel && \
   apk del build-dependencies
