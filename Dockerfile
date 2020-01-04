@@ -37,6 +37,9 @@ RUN apk update && apk upgrade && \
   rm -rf oauth2* && \
   chown root:root /usr/bin/oauth2_proxy && \
   npm i -g green-tunnel && \
+  curl -o xteve.zip -L https://github.com/xteve-project/xTeVe-Downloads/raw/master/xteve_linux_amd64.zip && \
+  unzip xteve.zip -d /usr/bin/ && \
+  rm -rf xteve.zip && \
   apk del build-dependencies
 
 ENTRYPOINT ["/init"]
