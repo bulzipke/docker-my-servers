@@ -1,6 +1,0 @@
-#!/usr/bin/with-contenv sh
-
-echo run oauth2_proxy
-
-exec s6-setuidgid abc /usr/bin/oauth2_proxy -config $TARGET_DIR/oauth2/oauth2_proxy.cfg
-
