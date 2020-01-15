@@ -11,7 +11,7 @@ ADD rootfs /
 
 RUN apk update && apk upgrade && \
   apk add openjdk8-jre-base python3 ffmpeg nss subversion \
-  transmission-daemon transmission-cli coreutils \
+  coreutils \
   tzdata chromium-chromedriver chromium git npm && \
   addgroup -S abc -g 1000 && adduser -S abc -G abc -u 1000 && \
   apk add --virtual build-dependencies curl python3-dev g++ freetype-dev libxslt-dev && \
