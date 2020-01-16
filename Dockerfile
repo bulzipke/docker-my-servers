@@ -31,9 +31,6 @@ RUN apk update && apk upgrade && \
   chown root:root /usr/bin/rclone && \
   chmod 755 /usr/bin/rclone && \
   npm i -g green-tunnel && \
-  curl -o xteve.zip -L https://github.com/xteve-project/xTeVe-Downloads/raw/master/xteve_linux_amd64.zip && \
-  unzip xteve.zip -d /usr/bin/ && \
-  rm -rf xteve.zip && \
   apk del build-dependencies
 
 ENTRYPOINT ["/init"]
