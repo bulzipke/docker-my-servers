@@ -10,7 +10,7 @@ ENV AWS_CONFIG_FILE=/data/aws/config
 ADD rootfs /
 
 RUN apk update && apk upgrade && \
-  apk add openjdk8-jre-base python3 ffmpeg nss subversion \
+  apk add openjdk8-jre-base python3 ffmpeg nss \
   coreutils \
   tzdata chromium-chromedriver chromium git && \
   addgroup -S abc -g 1000 && adduser -S abc -G abc -u 1000 && \
