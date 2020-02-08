@@ -12,7 +12,7 @@ ADD rootfs /
 RUN apk update && apk upgrade && \
   apk add openjdk8-jre-base python3 ffmpeg nss subversion \
   coreutils \
-  tzdata chromium-chromedriver chromium git npm && \
+  tzdata chromium-chromedriver chromium git && \
   addgroup -S abc -g 1000 && adduser -S abc -G abc -u 1000 && \
   apk add --virtual build-dependencies curl python3-dev g++ freetype-dev libxslt-dev && \
   S6_VERSION=$(curl -sX GET "https://api.github.com/repos/just-containers/s6-overlay/releases/latest" | awk '/tag_name/{print $4;exit}' FS='[""]') && \
@@ -30,7 +30,6 @@ RUN apk update && apk upgrade && \
   rm -rf rclone* && \
   chown root:root /usr/bin/rclone && \
   chmod 755 /usr/bin/rclone && \
-  npm i -g green-tunnel && \
   apk del build-dependencies
 
 ENTRYPOINT ["/init"]

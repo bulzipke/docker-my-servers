@@ -1,6 +1,0 @@
-#!/usr/bin/with-contenv sh
-
-echo run greentunnel
-
-exec s6-setuidgid abc gt --ip 0.0.0.0 --port 8000 --dnsType tls
-
