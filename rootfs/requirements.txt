@@ -9,3 +9,4 @@ awscli
 pytz
 lxml
 bs4
+requests
