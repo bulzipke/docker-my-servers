@@ -1,6 +1,0 @@
-#!/usr/bin/with-contenv sh
-
-echo run cloudplow
-
-exec s6-setuidgid abc cloudplow --config /data/cloudplow/config.json --cachefile /data/cloudplow/cache.db --logfile /logs/cloudplow.log run
-
