@@ -1,5 +1,5 @@
 asyncio_redis
-telepot
+amanobot
 htmlement
 youtube_dl
 mutagen
