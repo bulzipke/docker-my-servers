@@ -1,4 +1,4 @@
-#!/usr/bin/with-contenv sh
+#!/command/with-contenv sh
 
 if [ -f $TARGET_DIR/cron.conf ]; then
   echo cron.conf found
