@@ -15,6 +15,7 @@ RUN apk update && apk upgrade && \
   tzdata libxslt-dev \
   libffi-dev && \
   addgroup -S abc -g 1000 && adduser -S abc -G abc -u 1000 && \
+  addgroup -S docker -g 281 && addgroup abc docker && \
   apk add --virtual build-dependencies curl python3-dev g++ freetype-dev libxslt-dev && \
   S6_VERSION=$(curl -sX GET "https://api.github.com/repos/just-containers/s6-overlay/releases/latest" | awk '/tag_name/{print $4;exit}' FS='[""]') && \
   curl -o /tmp/s6-overlay-noarch.tar.xz -L "https://github.com/just-containers/s6-overlay/releases/download/${S6_VERSION}/s6-overlay-noarch.tar.xz" && \
