@@ -13,8 +13,8 @@ RUN apk update && apk upgrade && \
   apk add openjdk8-jre-base python3 py3-pip ffmpeg nss \
   coreutils \
   tzdata libxslt-dev \
+  subversion \
   libffi-dev && \
-  subversion && \
   addgroup -S abc -g 1000 && adduser -S abc -G abc -u 1000 && \
   addgroup -S docker -g 281 && addgroup abc docker && \
   apk add --virtual build-dependencies curl python3-dev g++ freetype-dev libxslt-dev && \
