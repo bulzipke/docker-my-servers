@@ -14,6 +14,7 @@ RUN apk update && apk upgrade && \
   coreutils \
   tzdata libxslt-dev \
   libffi-dev && \
+  subversion && \
   addgroup -S abc -g 1000 && adduser -S abc -G abc -u 1000 && \
   addgroup -S docker -g 281 && addgroup abc docker && \
   apk add --virtual build-dependencies curl python3-dev g++ freetype-dev libxslt-dev && \
