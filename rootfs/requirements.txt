@@ -13,3 +13,4 @@ requests
 PyGithub
 docker
 pillow
+lottie
