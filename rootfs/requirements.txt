@@ -14,3 +14,4 @@ PyGithub
 docker
 pillow
 lottie
+html5lib
