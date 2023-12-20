@@ -23,6 +23,7 @@ RUN apk update && apk upgrade && \
   tar -C / -Jxpf /tmp/s6-overlay-noarch.tar.xz && \
   curl -o /tmp/s6-overlay-x86_64.tar.xz -L "https://github.com/just-containers/s6-overlay/releases/download/${S6_VERSION}/s6-overlay-x86_64.tar.xz" && \
   tar -C / -Jxpf /tmp/s6-overlay-x86_64.tar.xz && \
+  rm /usr/lib/python*/EXTERNALLY-MANAGED && \
   pip3 install --upgrade pip && \
   pip3 install --upgrade -r /requirements.txt && \
   chmod +x /etc/cont-init.d/* && \
