@@ -1,4 +1,5 @@
 asyncio_redis
+async_timeout
 amanobot
 htmlement
 yt-dlp
