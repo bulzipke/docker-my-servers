@@ -29,6 +29,8 @@ RUN apk update && apk upgrade && \
   chmod +x /etc/cont-init.d/* && \
   chmod +x /etc/services.d/10-cron/run && \
   chmod +x /usr/local/bin/run_servers.py && \
+  mkdir /abc && \
+  chown abc:abc /abc && \
   rm -rf /tmp/* && \
   apk del build-dependencies
 
