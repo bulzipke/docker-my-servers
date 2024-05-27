@@ -1,5 +1,6 @@
 #!/command/with-contenv sh
 
+rm -f /tmp/update_docker.lock
 echo run crond
 
 crond
