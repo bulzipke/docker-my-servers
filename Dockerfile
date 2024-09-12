@@ -14,7 +14,7 @@ RUN apk update && apk upgrade && \
   coreutils \
   tzdata libxslt-dev \
   subversion \
-  unison \
+  rsync \
   libffi-dev && \
   addgroup -S abc -g 1000 && adduser -S abc -G abc -u 1000 && \
   addgroup -S docker -g 281 && addgroup abc docker && \
