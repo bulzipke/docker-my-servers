@@ -10,7 +10,7 @@ ENV UID=1000 \
 ADD rootfs /
 
 RUN apk update && apk upgrade && \
-  apk add openjdk8-jre-base python3 py3-pip ffmpeg nss go git icu-libs \
+  apk add openjdk8-jre-base python3 py3-pip ffmpeg nss go git icu-libs rclone \
   coreutils \
   tzdata libxslt-dev \
   subversion \
