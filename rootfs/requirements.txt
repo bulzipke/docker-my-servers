@@ -2,7 +2,7 @@ asyncio_redis
 async_timeout
 python-telegram-bot
 htmlement
-yt-dlp
+yt-dlp[default]
 mutagen
 tossi
 selenium
